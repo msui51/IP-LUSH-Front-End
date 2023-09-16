@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../../Components/Nav/Nav';
+import './homePage.scss';
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div className='homePage'>
+        <Nav/>
+    </div>
   )
 }
 

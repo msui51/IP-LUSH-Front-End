@@ -1,0 +1,30 @@
+@import '../../Styles/variables';
+
+.nav{
+    padding-right:2rem;
+    width:500px;
+    &__title{
+        
+    }
+    &__middle-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__search-bar{
+        width: 440px;
+        background: url('../../Assets/Icons/search-02.svg')no-repeat 20px center;
+        padding: 1.5rem 0 1.25rem 6.5rem;
+        border-radius: 0.75rem;
+        border: none;
+        background-color: $secondary-background-color;
+        &::placeholder{
+            font-size: 1.5rem;
+        }
+    }
+    &__scan-icon{
+        padding: 0.625rem 0.5rem;
+        background-color: $secondary-background-color;
+        border-radius: 0.75rem;
+    }
+}
