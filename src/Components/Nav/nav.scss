@@ -1,7 +1,7 @@
 @import '../../Styles/variables';
+@import '../../Styles/mixins';
 
 .nav{
-    padding-right:2rem;
     width:500px;
     &__title{
         
@@ -23,8 +23,41 @@
         }
     }
     &__scan-icon{
-        padding: 0.625rem 0.5rem;
-        background-color: $secondary-background-color;
-        border-radius: 0.75rem;
+        @include button;
+        &:hover{
+            cursor: pointer;
+        }
     }
+    &__bottom-wrapper{
+        position: relative;
+    }
+    &__buttons-wrapper{
+        margin-top: 1.563rem;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__category-button{
+        @include button;
+        font-size:1.5rem;
+        margin-right: 0.5rem;
+    }
+    &__scroll-wrapper{
+        position: absolute;
+        top:0;
+        width:500px;
+    }
+    &__scroll-next{
+        padding: 0.2rem 0.25rem;
+        position:absolute;
+        z-index: 99;
+        right:0;
+        margin-right: 0;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
 }
