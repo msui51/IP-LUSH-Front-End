@@ -1,0 +1,8 @@
+@import './variables';
+
+@mixin button{
+    padding: 0.625rem 0.5rem;
+    border:none;
+    background-color: $secondary-background-color;
+    border-radius: 0.75rem;
+}
