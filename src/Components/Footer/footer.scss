@@ -1,0 +1,42 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.footer{
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    background-color: $secondary-background-color;
+    align-items: center;
+    &__nav{
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+        color:$inactive-text-color;
+        // justify-content: space-around;
+        // width: 35%;
+        width:35%;
+    
+        padding: 0.5rem 0;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__nav-selected{
+        border-top: 3px solid $active-text-color;
+        color:$active-text-color;
+    }
+    &__nav-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 3rem;
+    }
+    &__nav-title{
+        font-weight: lighter;
+        margin-left: 0.75rem;
+    }
+    &__nav-title-selected{
+        font-weight: bold;
+    }
+}
