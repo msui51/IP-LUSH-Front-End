@@ -1,0 +1,63 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.nav{
+    width:500px;
+    &__title{
+        
+    }
+    &__middle-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__search-bar{
+        width: 440px;
+        background: url('../../Assets/Icons/search-02.svg')no-repeat 20px center;
+        padding: 1.5rem 0 1.25rem 6.5rem;
+        border-radius: 0.75rem;
+        border: none;
+        background-color: $secondary-background-color;
+        &::placeholder{
+            font-size: 1.5rem;
+        }
+    }
+    &__scan-icon{
+        @include button;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__bottom-wrapper{
+        position: relative;
+    }
+    &__buttons-wrapper{
+        margin-top: 1.563rem;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__category-button{
+        @include button;
+        font-size:1.5rem;
+        margin-right: 0.5rem;
+    }
+    &__scroll-wrapper{
+        position: absolute;
+        top:0;
+        width:500px;
+    }
+    &__scroll-next{
+        padding: 0.2rem 0.25rem;
+        position:absolute;
+        z-index: 99;
+        right:0;
+        margin-right: 0;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+}
