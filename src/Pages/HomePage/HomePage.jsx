@@ -1,8 +1,11 @@
 import React from 'react';
 import Nav from '../../Components/Nav/Nav';
 import './homePage.scss';
-import Camera from '../../Components/Camera/Camera';
+// import Camera from '../../Components/Camera/Camera';
 import Footer from '../../Components/Footer/Footer';
+import ItemList from '../../Components/ItemList/ItemList';
+
+
 
 function HomePage() {
 
@@ -13,6 +16,7 @@ function HomePage() {
         <div className='homePage__content-container'>
           <div className='homePage__left-side-wrapper'>
             <Nav />
+            <ItemList />
             LEFT SIDE
           </div>
           <div className='homePage__right-side-wrapper'>
