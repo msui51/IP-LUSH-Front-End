@@ -16,9 +16,11 @@ function HomePage() {
         <div className='homePage__content-container'>
           <div className='homePage__left-side-wrapper'>
             <Nav />
+            <div className='homePage__itemList-wrapper'>
             <ScrollArea>
               <ItemList />
             </ScrollArea>
+            </div>
           </div>
           <div className='homePage__right-side-wrapper'>
             RIGHT SIDE
