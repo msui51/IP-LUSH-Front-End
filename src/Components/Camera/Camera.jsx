@@ -1,5 +1,7 @@
 import React from 'react';
 import './Camera.scss'; 
+
+
 function Camera() {
   return (
     <div className="camera">
