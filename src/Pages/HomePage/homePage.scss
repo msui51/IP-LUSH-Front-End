@@ -2,4 +2,15 @@
 
 .homePage{
     padding:0 2rem;
+    display: flex;
+    &__content-container {
+        display: flex;
+        flex-direction: row;
+    }
+    &__left-side-wrapper {
+        width: 65%;
+    } 
+    &__right-side-wrapper {
+        width: 35%;
+    } 
 }
