@@ -1,24 +1,26 @@
 import React from 'react';
 import Nav from '../../Components/Nav/Nav';
-import Footer from '../../Components/Footer/Footer';
 import './homePage.scss';
-import { useEffect, useState } from 'react';
-import ItemList from '../../Components/ItemList/ItemList';
+import Camera from '../../Components/Camera/Camera';
+import Footer from '../../Components/Footer/Footer';
 
 function HomePage() {
-  const [isHomePage, setIsHomePage]=useState(false);
-  useEffect(()=>{
-    setIsHomePage(true);
-  },[]);
- 
 
   return (
     <>
+      {/* <Camera /> */}
       <div className='homePage'>
-        <Nav/>
-        <ItemList/>
+        <div className='homePage__content-container'>
+          <div className='homePage__left-side-wrapper'>
+            <Nav />
+            <ItemList/>
+          </div>
+          <div className='homePage__right-side-wrapper'>
+            RIGHT SIDE
+          </div>
+        </div>
       </div>
-      <Footer isHomePage={isHomePage} setIsHomePage={setIsHomePage} />
+      <Footer />
     </>
   )
 }
