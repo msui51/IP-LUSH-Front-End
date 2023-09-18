@@ -13,12 +13,13 @@ function HomePage() {
         <div className='homePage__content-container'>
           <div className='homePage__left-side-wrapper'>
             <Nav />
-            <ItemList/>
+            LEFT SIDE
           </div>
           <div className='homePage__right-side-wrapper'>
             RIGHT SIDE
           </div>
         </div>
+      
       </div>
       <Footer />
     </>
