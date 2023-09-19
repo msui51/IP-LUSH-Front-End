@@ -1,6 +1,8 @@
 @import '../../Styles/variables';
 
 .item {
+  display: flex;
+  flex-direction: column;
   background-color: $secondary-background-color;
   padding: 0.75rem;
   border-radius: 0.75rem;
@@ -21,9 +23,38 @@
     border: 1px solid $active-text-color;
     border-radius: 50%;
   }
+}
 
-  &.expanded {
-    width: 314px;
-    height: 227px; 
-  }
+.expandedItem {
+    display: flex;
+    flex-direction: row;
+    width: 545px;
+    background-color: $secondary-background-color;
+    margin: 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.65rem;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 0.5rem;
+    &__boxLeft {
+        margin-top: 1rem;
+    }
+    &__boxCenter {
+        margin-top: 2rem;
+    }
+    &__title {
+        margin: 0;
+        padding: 0;
+    }
+    &__productDetails {
+        margin: 0;
+        padding: 0;
+    }
+    &__boxRight {
+        margin: 1rem 1rem .65rem 0rem;
+    }
+    &__add-icon {
+        margin: 3rem 0rem 0rem 1.25rem;
+    }
+
 }
