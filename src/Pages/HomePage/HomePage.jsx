@@ -6,7 +6,7 @@ import Footer from '../../Components/Footer/Footer';
 import ItemList from '../../Components/ItemList/ItemList';
 import OrderList from '../../Components/OrderList/OrderList';
 import { ScrollArea } from '@mantine/core';
-
+import itemData from '../../Assets/Data/test.json';
 
 function HomePage() {
 
@@ -22,7 +22,9 @@ function HomePage() {
             </ScrollArea>
           </div>
           <div className='homePage__right-side-wrapper'>
-            <OrderList />
+            <OrderList 
+                itemData={itemData}
+            />
           </div>
         </div>
       
