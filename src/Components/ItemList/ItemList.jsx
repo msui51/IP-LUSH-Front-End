@@ -5,7 +5,8 @@ import data from '../../Assets/Data/test.json';
 import { ScrollArea } from '@mantine/core';
 
 function ItemList() {
-  // Log data.image here
+
+  
 
   return (
     <div className='itemList'>
