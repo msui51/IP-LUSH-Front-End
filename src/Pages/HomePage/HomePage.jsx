@@ -7,8 +7,13 @@ import ItemList from '../../Components/ItemList/ItemList';
 import OrderList from '../../Components/OrderList/OrderList';
 import { ScrollArea } from '@mantine/core';
 import itemData from '../../Assets/Data/test.json';
+import { useState, useEffect } from 'react';
 
 function HomePage() {
+  const [isHomePage, setIsHomePage]=useState(false);
+  useEffect(()=>{
+    setIsHomePage(true);
+  },[]);
 
   return (
     <>
@@ -29,7 +34,7 @@ function HomePage() {
         </div>
       
       </div>
-      <Footer />
+      <Footer isHomePage={isHomePage} setIsHomePage={setIsHomePage}/>
     </>
   )
 }
