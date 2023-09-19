@@ -12,17 +12,22 @@
             margin: 0 auto;
         }
     }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        height:206%;
+        justify-content: space-between;
+
+    }
     &__list{
         padding-left: 0px;
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        height: 845px;
+        // height: 845px;
         margin: 0.45rem;
         border-radius: 0.75rem;
-        margin-bottom: 0.65rem;
         align-content: center;
-        padding-bottom: 0.5rem;
         transition: opacity 0.3s ease-in-out;
     }
     &__listItem {
@@ -74,5 +79,32 @@
     }
     &__price-weight{
         font-weight: bold;
+    }
+    &__wrapper-bottom{
+        margin: 0 1rem;
+    }
+    &__wrapper-bottom-price{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &:nth-of-type(4){
+            border-top: 1px solid $primary-background-color;
+        }
+    }
+    &__price{
+        font-weight: bold;
+    }
+    &__subtitle-bold{
+        font-weight: bold;
+    }
+    &__button-pay{
+        width:100%;
+        border:none;
+        background-color: $active-text-color;
+        color:$secondary-background-color;
+        font-weight: bold;
+        padding: 0.625rem 0;
+        border-radius: 0.75rem;
+        font-size: 30px;
     }
 }
