@@ -4,6 +4,7 @@ import './homePage.scss';
 // import Camera from '../../Components/Camera/Camera';
 import Footer from '../../Components/Footer/Footer';
 import ItemList from '../../Components/ItemList/ItemList';
+import OrderList from '../../Components/OrderList/OrderList';
 import { ScrollArea } from '@mantine/core';
 
 
@@ -16,14 +17,12 @@ function HomePage() {
         <div className='homePage__content-container'>
           <div className='homePage__left-side-wrapper'>
             <Nav />
-            <div className='homePage__itemList-wrapper'>
             <ScrollArea>
               <ItemList />
             </ScrollArea>
-            </div>
           </div>
           <div className='homePage__right-side-wrapper'>
-            RIGHT SIDE
+            <OrderList />
           </div>
         </div>
       

@@ -1,21 +1,29 @@
 @import '../../Styles/variables';
 
-.item{
-    background-color: $secondary-background-color;
-    padding: 0.75rem;
-    border-radius: 0.75rem;
-    margin-bottom: 0.65rem;
-    &__title{
-        font-weight: bold;
-    }
-    &__bottom-wrapper{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__add-icon{
-        border: 1px solid $active-text-color;
-        border-radius: 50%;
-    }
+.item {
+  background-color: $secondary-background-color;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.65rem;
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__add-icon {
+    border: 1px solid $active-text-color;
+    border-radius: 50%;
+  }
+
+  &.expanded {
+    width: 314px;
+    height: 227px; 
+  }
 }
