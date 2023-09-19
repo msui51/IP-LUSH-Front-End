@@ -2,7 +2,7 @@
 @import '../../Styles/mixins';
 
 .nav{
-    width:500px;
+    width:564px;
     &__title{
         
     }
@@ -12,7 +12,7 @@
         justify-content: space-between;
     }
     &__search-bar{
-        width: 440px;
+        width: 495px;
         background: url('../../Assets/Icons/search-02.svg')no-repeat 20px center;
         padding: 1.5rem 0 1.25rem 6.5rem;
         border-radius: 0.75rem;
@@ -38,26 +38,11 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom: 0.65rem;
     }
     &__category-button{
         @include button;
         font-size:1.5rem;
         margin-right: 0.5rem;
     }
-    &__scroll-wrapper{
-        position: absolute;
-        top:0;
-        width:500px;
-    }
-    &__scroll-next{
-        padding: 0.2rem 0.25rem;
-        position:absolute;
-        z-index: 99;
-        right:0;
-        margin-right: 0;
-        &:hover{
-            cursor: pointer;
-        }
-    }
-
 }

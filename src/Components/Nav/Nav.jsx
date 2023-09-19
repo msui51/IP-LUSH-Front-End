@@ -1,14 +1,10 @@
 import React from 'react';
 import './nav.scss';
+import { ScrollArea } from '@mantine/core';
 
 
 function Nav() {
-  const clickRight=()=>{
-    const categories=document.getElementById('categories');
-      categories.animate({
-        scrollLeft:'+=100'
-      },500, 'swing')
-  }
+ 
   return (
     <div className='nav'>
         <h1 className='nav__title'>LUSH</h1>
@@ -25,6 +21,7 @@ function Nav() {
             </div>
         </div>
         <div className='nav__bottom-wrapper' id='wrapper'>
+        <ScrollArea>
         <div className='nav__buttons-wrapper' id='categories' >
           <button className='nav__category-button' type='button' value='All'>All</button>  
           <button className='nav__category-button' type='button' value='Bath and Shower'>Bath and Shower</button>  
@@ -34,14 +31,7 @@ function Nav() {
           <button className='nav__category-button' type='button' value='Hair'>Hair</button>  
           <button className='nav__category-button' type='button' value='Scent'>Scent</button>  
         </div>
-        <div className='nav__scroll-wrapper'>
-          <button className='nav__category-button nav__scroll-next' type='button' onClick={clickRight}>
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="Vector" d="M19.5 35.75C28.4746 35.75 35.75 28.4746 35.75 19.5C35.75 10.5254 28.4746 3.25 19.5 3.25C10.5254 3.25 3.25 10.5254 3.25 19.5C3.25 28.4746 10.5254 35.75 19.5 35.75Z" stroke="#292D32" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path id="Vector_2" d="M17.4525 25.2362L23.1725 19.5L17.4525 13.7637" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
+        </ScrollArea>
         </div>
     </div>
   )
