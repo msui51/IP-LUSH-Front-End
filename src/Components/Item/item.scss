@@ -1,0 +1,63 @@
+@import '../../Styles/variables';
+
+.item {
+  display: flex;
+  flex-direction: column;
+  height: 228px;
+  background-color: $secondary-background-color;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.65rem;
+  transition: opacity 0.3s ease-in-out;
+  &__title {
+    font-weight: bold;
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__add-icon {
+    border: 1px solid $active-text-color;
+    border-radius: 50%;
+  }
+}
+
+.expandedItem {
+    display: flex;
+    flex-direction: row;
+    width: 545px;
+    height: 228px;
+    background-color: $secondary-background-color;
+    margin: 0.75rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.65rem;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 0.5rem;
+    transition: opacity 0.3s ease-in-out;
+    &__boxLeft {
+        margin-top: 3rem;
+    }
+    &__boxCenter {
+        margin-top: 3.2rem;
+    }
+    &__title {
+        margin: 0;
+        padding: 0;
+    }
+    &__productDetails {
+        margin: 0;
+        padding: 0;
+    }
+    &__boxRight {
+        margin: 2.2rem 1rem .65rem 0rem;
+    }
+    &__add-icon {
+        margin: 6rem 3rem 0rem 1.25rem;
+    }
+
+}

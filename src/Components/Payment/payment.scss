@@ -1,0 +1,104 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
+.payment{
+    padding-top: 5rem;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__top-wrapper-first{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+    }
+    &__back-icon{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__title{
+        padding-left: 5rem;
+    }
+    &__subtitle{
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-bottom: 1px solid $active-text-color;
+        padding-bottom: 0.5rem;
+    }
+    &__button-secondary-wrapper{
+        display:flex;
+        flex-direction: row;
+        width:100%;
+    }
+    &__button-secondary{
+        width:50%;
+        font-size: 1.5rem;
+        background-color: $primary-background-color;
+        color:$inactive-text-color;
+        padding:0.625rem;
+        border-radius: 0.813rem 0 0 0.813rem;
+        &:nth-of-type(2){
+            border-radius: 0 0.813rem 0.813rem 0;
+            border-left: none;
+        }
+    }
+    &__button-third{
+        width:50%;
+        font-size: 1.5rem;
+        background-color: $primary-background-color;
+        color:$inactive-text-color;
+        padding:0.625rem;
+        border-radius: 0.813rem 0 0 0.813rem;
+        &:nth-of-type(2){
+            border-radius: 0 0 0 0;
+            border-left:none;
+            border-right:none;
+        }
+        &:nth-of-type(3){
+            border-radius: 0 0.813rem 0.813rem 0;
+        }
+    }
+    &__button--selected{
+        background-color: $active-text-color;
+        color: $secondary-background-color;
+    }
+    &__text{
+        color:$payment-form-text;
+        border-bottom: 1px solid $active-text-color;
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+        margin-bottom: 6rem;
+    }
+    &__text-no-margin{
+        margin-bottom: 0;
+        margin-top: 0;
+        width:90%;
+    }
+    &__top-wrapper-third{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width:100%;
+        margin-top: 2rem
+    }
+    &__gift-card-icon{
+        @include button;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__button-primary{
+        width:100%;
+        border:none;
+        background-color: $active-text-color;
+        color:$secondary-background-color;
+        font-weight: bold;
+        padding: 0.625rem 0;
+        border-radius: 0.75rem;
+        font-size: 30px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
