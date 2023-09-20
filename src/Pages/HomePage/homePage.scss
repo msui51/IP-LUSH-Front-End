@@ -1,22 +1,56 @@
 @import '../../Styles/variables';
 
 .homePage{
-    padding:0 2rem;
+    padding:0 2rem 0 2rem;
     display: flex;
     height: 95vh;
+    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Set your desired background color */
+
     &__content-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100vw;
     }
+
     &__left-side-wrapper {
         width: 65%;
     } 
+
     &__itemList-wrapper {
         margin-top: 1.5rem;
     }
+
     &__right-side-wrapper {
-        width: 35%;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        width: 44%;
+        margin-right: 0rem;
+        display: flex;
+        flex-direction: column;
+        height: 1190px;
+        background-color: white;
+        margin-top: 5rem;
     } 
+
+    &__camera{
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__behind-camera {
+        // position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f0f0f0; /* Set your desired background color */
+  z-index: 0;
+
+    }
 }

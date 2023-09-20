@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import capturepicture from '../../Assets/Icons/capturepicture.svg';
 import target from '../../Assets/Icons/target.svg';
 import close from '../../Assets/Icons/close.svg';
+import Webcam from 'react-webcam';
 import './Camera.scss';
 
-function Camera() {
+function Camera( { toggleCamera} ) {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const [capturedImage, setCapturedImage] = useState(null);
+  
 
   const startCamera = async () => {
     try {
@@ -39,18 +41,27 @@ function Camera() {
     };
   }, []);
 
+  const webcamRef = React.useRef(null);
+
+  const capture = () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    // Handle the captured image data as needed (e.g., send it to a server).
+    console.log(imageSrc);
+  };
+
+
   return (
     <div className='camera'>
-        
+
         <video ref={videoRef} autoPlay className='camera__video' />  
-        
-        <Link to='/' onClick={() => {stopCamera()}} className='camera__link-homepage'>
+
+        <Link to='/' onClick={() => {toggleCamera(); stopCamera();}} className='camera__link-close'>
           <img src={close} className='camera__close' />
         </Link>
         
         <img src={target} className='camera__target' />
         
-        <Link to='/checkout' onClick={() => {stopCamera()}} className='camera__link-checkout' >
+        <Link to='/checkout' onClick={() => {stopCamera()}} className='camera__link-capture' >
           <img src={capturepicture} className='camera__capture' />
         </Link>
 

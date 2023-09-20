@@ -1,0 +1,110 @@
+@import '../../Styles/variables';
+
+.orderList {
+    display: flex;
+    flex-direction: column;
+    &__header{
+        h1 {
+            text-align: center;
+            border-bottom: 1px solid gray;
+            padding: 1rem 0.2rem 1rem 0.2rem;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        height:206%;
+        justify-content: space-between;
+
+    }
+    &__list{
+        padding-left: 0px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        // height: 845px;
+        margin: 0.45rem;
+        border-radius: 0.75rem;
+        align-content: center;
+        transition: opacity 0.3s ease-in-out;
+    }
+    &__listItem {
+        margin-right: 6px;
+        width: 82%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__boxLeft {
+        margin-top: 3rem;
+    }
+    &__item-image {
+        border: solid 1px gray;
+        border-radius: 15px;
+        margin-left: 0.7rem;
+    }
+    &__boxCenter {
+        margin-top: 3.2rem;
+    }
+    &__title {
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 0;
+        font-weight: bold;
+    }
+    &__productDetails {
+        margin: 0.7rem 0rem 0.2rem 0rem;
+        padding: 0;
+    }
+    &__boxRight {
+        margin: 3.2rem -3rem .65rem 0rem;
+    }
+    &__productQuantityWrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__button{
+        border: 1px solid $active-text-color;
+        border-radius: 50%;
+        background-color: $secondary-background-color;
+    }
+    &__icon--minus{
+        padding: 0.6rem 0.3rem;
+    }
+    &__icon--add{
+        padding:0.12rem;
+    }
+    &__price-weight{
+        font-weight: bold;
+    }
+    &__wrapper-bottom{
+        margin: 0 1rem;
+    }
+    &__wrapper-bottom-price{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &:nth-of-type(4){
+            border-top: 1px solid $primary-background-color;
+        }
+    }
+    &__price{
+        font-weight: bold;
+    }
+    &__subtitle-bold{
+        font-weight: bold;
+    }
+    &__button-pay{
+        width:100%;
+        border:none;
+        background-color: $active-text-color;
+        color:$secondary-background-color;
+        font-weight: bold;
+        padding: 0.625rem 0;
+        border-radius: 0.75rem;
+        font-size: 30px;
+    }
+}

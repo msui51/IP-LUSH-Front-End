@@ -3,14 +3,14 @@ import './nav.scss';
 import { ScrollArea } from '@mantine/core';
 
 
-function Nav() {
+function Nav({ toggleCamera }) {
  
   return (
     <div className='nav'>
         <h1 className='nav__title'>LUSH</h1>
         <div className='nav__middle-wrapper'>
             <input className='nav__search-bar' type='search' placeholder='Search'/> 
-            <div className='nav__scan-icon'>
+            <div className='nav__scan-icon' onClick={toggleCamera}>
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="Vector" d="M33 14.625C32.385 14.625 31.875 14.115 31.875 13.5V10.5C31.875 6.63 29.37 4.125 25.5 4.125H10.5C6.63 4.125 4.125 6.63 4.125 10.5V13.5C4.125 14.115 3.615 14.625 3 14.625C2.385 14.625 1.875 14.115 1.875 13.5V10.5C1.875 5.34 5.34 1.875 10.5 1.875H25.5C30.66 1.875 34.125 5.34 34.125 10.5V13.5C34.125 14.115 33.615 14.625 33 14.625Z" fill="#969696"/>
                 <path id="Vector_2" d="M25.5 34.125H10.5C5.34 34.125 1.875 30.66 1.875 25.5V22.5C1.875 21.885 2.385 21.375 3 21.375C3.615 21.375 4.125 21.885 4.125 22.5V25.5C4.125 29.37 6.63 31.875 10.5 31.875H25.5C29.37 31.875 31.875 29.37 31.875 25.5V22.5C31.875 21.885 32.385 21.375 33 21.375C33.615 21.375 34.125 21.885 34.125 22.5V25.5C34.125 30.66 30.66 34.125 25.5 34.125Z" fill="#969696"/>
