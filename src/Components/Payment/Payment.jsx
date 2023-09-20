@@ -74,9 +74,11 @@ function Payment({togglePaymentProcess}) {
                 : null}
             </div>
         </div>
+        {isCard ?
         <div className='payment__bottom-wrapper'>
             <button className='payment__button-primary' onClick={togglePaymentProcess} type='button'>PROCESS PAYMENT</button>
         </div>
+        : null}
     </div>
   )
 }
