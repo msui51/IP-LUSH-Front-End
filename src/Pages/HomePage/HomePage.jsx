@@ -52,7 +52,7 @@ function HomePage() {
 
         <div className='homePage'>
           <div className='homePage__content-container'>
-            {isPaymentProcess ? <Payment/> : 
+            {isPaymentProcess ? <Payment togglePaymentProcess={togglePaymentProcess}/> : 
             <div className='homePage__left-side-wrapper'>
               <Nav toggleCamera={toggleCamera} />
               <ScrollArea>
