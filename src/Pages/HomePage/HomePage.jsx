@@ -10,10 +10,15 @@ import itemData from '../../Assets/Data/test.json';
 import { useState, useEffect } from 'react';
 
 function HomePage() {
+  const [orderList, setOrderList]=useState([]);
   const [isHomePage, setIsHomePage]=useState(false);
   useEffect(()=>{
     setIsHomePage(true);
   },[]);
+  
+  /* useEffect(()=>{
+    setOrderList([...orderList, ]) 
+   },[ ])*/
 
   return (
     <>
