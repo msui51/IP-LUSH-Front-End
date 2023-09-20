@@ -2,7 +2,7 @@ import React from 'react';
 import './orderList.scss';
 import { useState } from 'react';
 
-function OrderList({}) {
+function OrderList({togglePaymentProcess, isPaymentProcess}) {
   const [count, setCount]=useState(0);
   const handleAddChange=()=>{
       setCount(count + 1);
@@ -17,7 +17,7 @@ function OrderList({}) {
     <div className='orderList'>
       <div className='orderList__header'>
         <h1>CURRENT ORDER ({count})</h1>
-        <div className='orderList__wrapper'>
+        <div className={isPaymentProcess ? 'orderList__wrapper orderList__wrapper--no-button' : 'orderList__wrapper'}>
           <div className='orderList__wrapper-top'>
             <ul className='orderList__list'>
               <li className='orderList__listItem'>
@@ -74,8 +74,10 @@ function OrderList({}) {
               <p className='orderList__subtitle orderList__subtitle-bold'>TOTAL :</p>
               <p className='orderList__price'>$0.00</p>
             </div>
-            <button className='orderList__button-pay' type='submit'>PAY NOW</button>
-          </div>
+            {isPaymentProcess ? null :
+            <button className='orderList__button-pay' type='submit' onClick={togglePaymentProcess}>PAY NOW</button>
+            }
+            </div>
         </div>
         
       </div>
