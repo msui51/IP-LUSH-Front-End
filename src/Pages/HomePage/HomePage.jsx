@@ -6,13 +6,14 @@ import ItemList from '../../Components/ItemList/ItemList';
 import OrderList from '../../Components/OrderList/OrderList';
 import { ScrollArea } from '@mantine/core';
 import itemData from '../../Assets/Data/test.json';
+import Payment from '../../Components/Payment/Payment';
 import './homePage.scss';
 
 function HomePage() {
   const [isHomePage, setIsHomePage] = useState(false);
   const [isCameraOn, setIsCameraOn] = useState(false);
   const [lushOrderList, setLushOrderList] = useState([]);
-
+  const [isPaymentProcess, setIsPaymentProcess] = useState(false);
   // Load Lush Order List from localStorage on component mount
   useEffect(() => {
     const storedLushOrderList = localStorage.getItem('LushOrderList');
@@ -56,6 +57,9 @@ function HomePage() {
   const toggleCamera = () => {
     setIsCameraOn(!isCameraOn);
   };
+  const togglePaymentProcess=()=>{
+    setIsPaymentProcess(!isPaymentProcess);
+  }
 
   return (
     <>
@@ -68,6 +72,7 @@ function HomePage() {
       <div className='homePage__behind-camera'>
         <div className='homePage'>
           <div className='homePage__content-container'>
+            {isPaymentProcess ? <Payment togglePaymentProcess={togglePaymentProcess}/> :
             <div className='homePage__left-side-wrapper'>
               <Nav toggleCamera={toggleCamera} />
               <div className='homePage__item-list-wrapper'>
@@ -79,11 +84,14 @@ function HomePage() {
               </ScrollArea>
               </div>
             </div>
+            }
             <div className='homePage__right-side-wrapper'>
               <OrderList
                 itemData={itemData}
                 lushOrderList={lushOrderList}
                 updateLushOrderList={updateLushOrderList}
+                togglePaymentProcess={togglePaymentProcess}
+                isPaymentProcess={isPaymentProcess}
               />
             </div>
           </div>

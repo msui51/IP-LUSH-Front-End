@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './orderList.scss';
 
-function OrderList({ lushOrderList, updateLushOrderList }) {
+function OrderList({ lushOrderList, updateLushOrderList, togglePaymentProcess, isPaymentProcess }) {
   console.log('from OrderList state function:', lushOrderList);
   const [count, setCount] = useState(0);
 
@@ -53,7 +53,7 @@ function OrderList({ lushOrderList, updateLushOrderList }) {
     <div className='orderList'>
       <div className='orderList__header'>
         <h1>CURRENT ORDER ({result})</h1>
-        <div className='orderList__wrapper'>
+        <div className={isPaymentProcess ? 'orderList__wrapper orderList__wrapper--no-button' : 'orderList__wrapper'}>
           <div className='orderList__wrapper-top'>
             <ul className='orderList__list'>
               {groupedOrderList.map((item) => (
@@ -108,7 +108,9 @@ function OrderList({ lushOrderList, updateLushOrderList }) {
               <p className='orderList__subtitle orderList__subtitle-bold'>TOTAL :</p>
               <p className='orderList__price'>$0.00</p>
             </div>
-            <button className='orderList__button-pay' type='submit'>PAY NOW</button>
+            {isPaymentProcess ? null :
+            <button className='orderList__button-pay' type='submit' onClick={togglePaymentProcess}>PAY NOW</button>
+            }
           </div>
         </div>
       </div>
