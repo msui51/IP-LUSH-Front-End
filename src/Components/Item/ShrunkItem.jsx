@@ -24,12 +24,14 @@ const ShrunkItem = ({ lushOrderList, updateLushOrderList, name, product, price, 
 
   return (
     <div className="item">
+      <div className='item__top-wrapper'>
       <img
         className="item__image"
         src={require(`../../Assets/Images/${image}`)}
         alt="soap bar"
       ></img>
       <p className="item__title">{name}</p>
+      </div>
       <div className="item__bottom-wrapper">
         <p className="item__price-weight">{price}/{weight}</p>
         <svg

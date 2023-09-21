@@ -15,16 +15,16 @@
     &__wrapper{
         display: flex;
         flex-direction: column;
-        height: 100%;
         justify-content: space-between;
-
+    }
+    &__wrapper--no-button{
+        height:130%;
     }
     &__list{
         padding-left: 0px;
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        // height: 845px;
         margin: 0.45rem;
         border-radius: 0.75rem;
         align-content: center;
@@ -49,6 +49,7 @@
     }
     &__boxCenter {
         margin-top: 3.2rem;
+        width:45%;
     }
     &__title {
         margin: 1rem 0rem 0rem 0rem;
@@ -62,6 +63,11 @@
     &__boxRight {
         margin: 3.2rem -3rem .65rem 0rem;
     }
+    &__button{
+        border: 1px solid $active-text-color;
+        border-radius: 50%;
+        background-color: $secondary-background-color;
+    }
     &__productQuantityWrapper{
         display: flex;
         flex-direction: row;
@@ -69,15 +75,13 @@
         justify-content: space-around;
     }
     &__button{
-        border: 1px solid $active-text-color;
-        border-radius: 50%;
-        background-color: $secondary-background-color;
+        display: flex;
     }
     &__icon--minus{
-        padding: 0.6rem 0.3rem;
+        padding: 0.6rem 0.1rem;
     }
     &__icon--add{
-        padding:0.12rem;
+       padding: 0.1rem 0;
     }
     &__price-weight{
         font-weight: bold;

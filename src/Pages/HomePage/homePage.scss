@@ -22,8 +22,9 @@
         width: 65%;
     } 
 
-    &__itemList-wrapper {
-        margin-top: 1.5rem;
+    &__item-list-wrapper {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
     }
 
     &__right-side-wrapper {
@@ -33,9 +34,10 @@
         margin-right: 0rem;
         display: flex;
         flex-direction: column;
-        height: 1190px;
+        height: 100%;
         background-color: white;
         margin-top: 5rem;
+        padding-bottom: 2rem;
     } 
 
     &__camera{
