@@ -9,15 +9,15 @@
   margin: 0rem 0.12rem 0.65rem 0.12rem;
   transition: opacity 0.3s ease-in-out;
   width: 140px;
-  height: 195px;
+  height: 200px;
   &__image {
     max-height: 121px;
     max-width: 157px;
   }
   &__title {
     font-weight: bold;
+    margin-bottom: 0.25rem;
   }
-
   &__bottom-wrapper {
     display: flex;
     flex-direction: row;

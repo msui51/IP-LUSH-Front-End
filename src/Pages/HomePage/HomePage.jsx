@@ -70,12 +70,14 @@ function HomePage() {
           <div className='homePage__content-container'>
             <div className='homePage__left-side-wrapper'>
               <Nav toggleCamera={toggleCamera} />
+              <div className='homePage__item-list-wrapper'>
               <ScrollArea>
                 <ItemList
                   lushOrderList={lushOrderList}
                   updateLushOrderList={updateLushOrderList}
                 />
               </ScrollArea>
+              </div>
             </div>
             <div className='homePage__right-side-wrapper'>
               <OrderList

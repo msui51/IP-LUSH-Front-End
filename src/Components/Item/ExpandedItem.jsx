@@ -4,14 +4,11 @@ import './item.scss';
 const ExpandedItem = ({ lushOrderList, updateLushOrderList, name, product, price, weight, code, quantity, image }) => {
   return (
        <div className="expandedItem">
-        <div className='expandedItem__boxLeft'>
             <img
                 className="item__image"
                 src={require(`../../Assets/Images/${image}`)}
                 alt="soap bar"
             />
-        
-        </div>
         <div className='expandedItem__boxCenter'>
             <p className="expandedItem__title">{name}</p>
             <p className="expandedItem__productDetails">{product}</p>
