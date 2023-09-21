@@ -21,7 +21,7 @@ function ItemList({ lushOrderList, updateLushOrderList }) {
                 product={data.product}
                 price={data.price}
                 weight={data.weight}
-              
+                image={data.image}
               />
             </li>
           ))}

@@ -1,13 +1,13 @@
 import React from 'react';
 import './item.scss';
 
-const ExpandedItem = ({ lushOrderList, updateLushOrderList, name, product, price, weight, code, quantity }) => {
+const ExpandedItem = ({ lushOrderList, updateLushOrderList, name, product, price, weight, code, quantity, image }) => {
   return (
        <div className="expandedItem">
         <div className='expandedItem__boxLeft'>
             <img
                 className="item__image"
-                src={require('../../Assets/Images/Frame 14.png')}
+                src={require(`../../Assets/Images/${image}`)}
                 alt="soap bar"
             />
         

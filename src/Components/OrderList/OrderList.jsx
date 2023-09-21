@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './orderList.scss';
 
 function OrderList({ lushOrderList, updateLushOrderList }) {
+  console.log('from OrderList state function:', lushOrderList);
   const [count, setCount] = useState(0);
 
   const handleAddChange = () => {
@@ -24,10 +25,11 @@ function OrderList({ lushOrderList, updateLushOrderList }) {
     } else {
       acc.push({
         name: item.name,
-        product: item.product, 
+        product: item.product,
         code: item.code,
         weight: item.weight,
         price: item.price,
+        image: item.image,
         quantity: 1,
       });
     }
@@ -50,10 +52,9 @@ function OrderList({ lushOrderList, updateLushOrderList }) {
               {groupedOrderList.map((item) => (
                 <li className='orderList__listItem' key={item.name}>
                   <div className='orderList__boxLeft'>
-                    {/* Replace this with the actual image source */}
                     <img
                       className="orderList__item-image"
-                      src={require(`../../Assets/Images/Frame 14.png`)}
+                      src={require(`../../Assets/Images/${item.image}`)}
                       alt={item.name}
                     />
                   </div>
@@ -69,8 +70,8 @@ function OrderList({ lushOrderList, updateLushOrderList }) {
                         <button className='orderList__button' type='submit' onClick={handleAddChange}>
                           {/* Your add button SVG */}
                         </button>
-                      </div> 
-                    </div>          
+                      </div>
+                    </div>
                   </div>
                   <div className='orderList__boxRight'>
                     <p className="orderList__price-weight">{item.price}</p>

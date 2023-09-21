@@ -21,17 +21,7 @@ function HomePage() {
       console.log('Lush Order List loaded from localStorage:', JSON.parse(storedLushOrderList));
     } else {
       // Create a default Lush Order List if none exists
-      const defaultLushOrderList = [
-        {
-          name: 'Salt Water Soother',
-          product: 'Bath Bomb',
-          code: '123456',
-          quantity: '120 unit',
-          weight: '180 g',
-          price: '$8.00',
-          image: '../../Assets/Images/IFrame-14.png',
-        },
-      ];
+      const defaultLushOrderList = [];
       setLushOrderList(defaultLushOrderList);
       localStorage.setItem('LushOrderList', JSON.stringify(defaultLushOrderList));
       console.log('New Lush Order List created and populated in localStorage:', defaultLushOrderList);
@@ -70,7 +60,10 @@ function HomePage() {
   return (
     <>
       {isCameraOn && (
-        <Camera toggleCamera={toggleCamera} className='homePage__camera' />
+        <Camera 
+          toggleCamera={toggleCamera} 
+          className='homePage__camera'
+        />
       )}
       <div className='homePage__behind-camera'>
         <div className='homePage'>

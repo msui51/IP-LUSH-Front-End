@@ -5,8 +5,8 @@
         "code": "123456",
         "quantity": "120 unit",
         "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "price": 8.00,
+        "image": "salt_water_soother_bath_cube_2022_91c426fe_thumbnail_256.png"
     },
     {
         "name": "Deep Sleep",
@@ -14,322 +14,162 @@
         "code": "665743",
         "quantity": "114 unit",
         "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "price": 8.00,
+        "image": "deep_sleep_bath_cube_2022_7d9f194a_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
+        "name": "Groovy Fairy",
         "product": "Bath Bomb",
-        "code": "123456",
+        "code": "549843",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "95 g",
+        "price": 8.00,
+        "image": "groovy_fairy_bath_bomb_2023_e3e9dfb4_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Snow Fairy",
+        "product": "Body Spray",
+        "code": "453875",
         "quantity": "120 unit",
         "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "price": 50.00,
+        "image": "snow_fairy_body_spray_2020_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Barbie Boombox",
+        "product": "Soap",
+        "code": "445125",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "90 g",
+        "price": 12.00,
+        "image": "barbie_boombox_soap_2023_07f3660e_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Question Block Gift Box",
+        "product": "Product Holder",
+        "code": "884545",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "90 g",
+        "price": 9.00,
+        "image": "super_mario_box_2023_e95cce13_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Ghost In The Dark",
+        "product": "Soap",
+        "code": "332645",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "100 g",
+        "price": 12.00,
+        "image": "ghost_in_the_dark_soap_2023_7e055729_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Mario",
+        "product": "Shower Gel",
+        "code": "145626",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "295 g",
+        "price": 32.00,
+        "image": "mario_shower_gel_2023_f9479187_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
+        "name": "Intergalactic",
         "product": "Bath Bomb",
-        "code": "123456",
+        "code": "669824",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "200 g",
+        "price": 12.00,
+        "image": "intergalactic_bath_bomb_2021_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
+        "name": "Barbie Bath",
         "product": "Bath Bomb",
-        "code": "123456",
+        "code": "451682",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "110 g",
+        "price": 12.00,
+        "image": "mario_shower_gel_2023_f9479187_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Monster Octopus",
+        "product": "Shower Jelly",
+        "code": "745482",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "185 g",
+        "price": 22.00,
+        "image": "monster_octopus_shower_jelly_2023_06c3798e_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Outback Mate",
+        "product": "Soap",
+        "code": "114532",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "100 g",
+        "price": 11.00,
+        "image": "outback_mate_soap_2020_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Demon in the Dark",
+        "product": "Soap",
+        "code": "223565",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "100 g",
+        "price": 10.00,
+        "image": "demon_in_the_dark_soap_2023_b2f1729f_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Christmas Cranberry",
+        "product": "Soap",
+        "code": "445249",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "100 g",
+        "price": 12.00,
+        "image": "christmas_cranberry_soap_2023_9cec9aa6_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Snow Bear",
+        "product": "Soap",
+        "code": "332545",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "90 g",
+        "price": 11.00,
+        "image": "snow_bear_soap_2023_5b4ab530_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Sleepy",
+        "product": "Shower Bomb",
+        "code": "986356",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "40 g",
+        "price": 7.00,
+        "image": "sleepy_shower_bomb_2020_e01a91b0_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Sea Vegetable",
+        "product": "Soap",
+        "code": "224151",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "100 g",
+        "price": 11.00,
+        "image": "sea_vegetable_soap_2020_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Coco Loco",
+        "product": "Shower Oil",
+        "code": "326564",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "50 g",
+        "price": 13.00,
+        "image": "coco_loco_shower_oil_2020_e77febb0_thumbnail_256.png"
     },
     {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
+        "name": "Coconut Rice Cake",
+        "product": "Shampoo Bar",
+        "code": "214564",
         "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
-    },
-    {
-        "name": "Salt Water Soother",
-        "product": "Bath Bomb",
-        "code": "123456",
-        "quantity": "120 unit",
-        "weight": "180 g",
-        "price": "8",
-        "image": "Frame 14.png"
+        "weight": "55 g",
+        "price": 20.00,
+        "image": "coconut_rice_cake_shampoo_bar_8e60bd63_thumbnail_256.png"
     }
+
 ]
+    

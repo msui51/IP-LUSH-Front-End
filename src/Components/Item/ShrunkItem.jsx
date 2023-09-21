@@ -1,6 +1,5 @@
 import React from 'react';
 import './item.scss';
-import soapImage from '../../Assets/Images/Frame 14.png';
 
 const ShrunkItem = ({ lushOrderList, updateLushOrderList, name, product, price, weight, code, image }) => {
   const handleClick = () => {
@@ -27,7 +26,7 @@ const ShrunkItem = ({ lushOrderList, updateLushOrderList, name, product, price, 
     <div className="item">
       <img
         className="item__image"
-        src={soapImage}
+        src={require(`../../Assets/Images/${image}`)}
         alt="soap bar"
       ></img>
       <p className="item__title">{name}</p>
