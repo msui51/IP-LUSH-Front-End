@@ -17,9 +17,7 @@
         flex-direction: column;
         height:206%;
         justify-content: space-between;
-    }
-    &__wrapper--no-button{
-        height:230%;
+
     }
     &__list{
         padding-left: 0px;
@@ -108,8 +106,5 @@
         padding: 0.625rem 0;
         border-radius: 0.75rem;
         font-size: 30px;
-        &:hover{
-            cursor: pointer;
-        }
     }
 }

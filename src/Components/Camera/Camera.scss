@@ -1,6 +1,6 @@
 .camera {
     // width: 800px;
-    // height: 90%;
+    height: 93vh;
     // margin: auto;
     position: absolute;
     z-index: 1;
@@ -13,11 +13,19 @@
         transform: rotate(90deg); /* Rotate the container by -90 degrees */
     }
 
+    &__capturedImage {
+        object-fit: cover;
+        height: 93vh;
+        max-width: 100%;
+        border-radius: 65px;
+        transition: height 0.5s; /* Add a transition for height */
+    }
+
     &__video{
         transform: rotate(0deg); /* Rotate the video element by 90 degrees */
         transform-origin: 50% 50%;
         width: 100%;
-        height: 1375px;
+        height: 93vh;
         object-fit: cover;
         border-radius: 70px;
     }
@@ -49,19 +57,11 @@
         color: white;
         z-index: 1;
     }
-    
-    &__link-capture {
-        position: absolute;
-        transform: translateX(-50%);
-        top: 800px;
-        left: 50%;
-        z-index: 1;
-    }
-
+   
     &__capture {
         position: absolute;
         transform: translateX(-50%);
-        bottom: -550px;
+        bottom: 58px;
         left: 50%;
         width: 125px;
         opacity: 0.7;
@@ -70,3 +70,115 @@
     }
 
 }
+
+// Animation for Lush Lens Results tab;
+.expanded {
+    height: 400px; /* Adjust the desired height for the expansion */
+  }
+
+// Lush Lens insert point
+.flashing-message {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Background overlay with transparency */
+  }
+  
+  .flashing-message p {
+    animation: flashing 1s infinite alternate; /* Flashing animation */
+    color: #FF10F0; /* Neon pink color */
+    font-size: 80px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    text-shadow: 0 10px 65px rgba(255, 16, 240, 0.8); /* Shadow effect */
+    position: absolute; /* Position relative to the container */
+    top: 10%; /* Move the <p> element 20% below the top of the container */
+    left: 0;
+    right: 0;
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  @keyframes flashing {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .results-tab {
+    &__collapsed{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ccc; /* Grey background color */
+        text-align: center; /* Center the content horizontally */
+        padding: 10px; /* Adjust padding as needed */
+        height: 35px;
+        border-radius: 30px 30px 0 0; /* Top-left and top-right corners rounded */
+        transition: height 0.3s ease-in-out; /* Add a transition for height */
+        overflow: hidden; /* Hide overflow content */
+        &:hover {
+          cursor: pointer;
+        }    
+    }
+    &__expanded {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ccc; /* Grey background color */
+        text-align: center; /* Center the content horizontally */
+        padding: 10px; /* Adjust padding as needed */
+        height: 280px;
+        border-radius: 30px 30px 0 0; /* Top-left and top-right corners rounded */
+        transition: height 0.3s ease-in-out; /* Add a transition for height */
+        overflow: hidden; /* Hide overflow content */
+        &:hover {
+          cursor: pointer;
+        }    
+    }
+    &__lensResultsContainer {
+      display: flex;
+      flex-direction: row;
+      border-top: 3px solid black;
+      justify-content: center;
+      width: 80%; /* Set the width to 80% of the container */
+      margin: 0 auto; /* Center the border horizontally */
+      font-size: large;
+    }
+  }
+  
+  .item-card {
+    display: none;
+    opacity: 0; /* Start with opacity set to 0 */
+    transition: opacity 0.5s ease-in-out; /* Add a transition for opacity */
+    margin-bottom: 10px; /* Add some margin between item-cards */
+    &.visible {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      opacity: 1; /* Change opacity to 1 when visible */
+      transition: opacity 0.5s ease-in-out;
+    }
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      scale: 0.75;
+      justify-content: center;
+    }
+  }
+  
+  
+  
+  
