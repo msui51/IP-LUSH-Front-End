@@ -3,7 +3,7 @@ import './item.scss';
 import ShrunkItem from './ShrunkItem';
 import ExpandedItem from './ExpandedItem';
 
-function Item({ name, product, price, weight, code, quantity }) {
+function Item({ lushOrderList, updateLushOrderList, name, product, price, weight, code, quantity }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleView = () => {
@@ -14,6 +14,8 @@ function Item({ name, product, price, weight, code, quantity }) {
     <div onClick={toggleView}>
       {isExpanded ? (
         <ExpandedItem
+          lushOrderList={lushOrderList}
+          updateLushOrderList={updateLushOrderList}
           name={name}
           product={product}
           price={price}
@@ -23,6 +25,8 @@ function Item({ name, product, price, weight, code, quantity }) {
         />
       ) : (
         <ShrunkItem
+          lushOrderList={lushOrderList}
+          updateLushOrderList={updateLushOrderList}
           name={name}
           product={product}
           price={price}

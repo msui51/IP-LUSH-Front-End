@@ -1,7 +1,7 @@
 import React from 'react';
 import './item.scss';
 
-const ExpandedItem = ({ name, product, price, weight, code, quantity }) => {
+const ExpandedItem = ({ lushOrderList, updateLushOrderList, name, product, price, weight, code, quantity }) => {
   return (
        <div className="expandedItem">
         <div className='expandedItem__boxLeft'>

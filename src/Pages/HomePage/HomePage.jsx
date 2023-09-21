@@ -11,8 +11,32 @@ import './homePage.scss';
 function HomePage() {
   const [isHomePage, setIsHomePage] = useState(false);
   const [isCameraOn, setIsCameraOn] = useState(false);
+  const [lushOrderList, setLushOrderList] = useState([]);
 
+  // Load Lush Order List from localStorage on component mount
   useEffect(() => {
+    const storedLushOrderList = localStorage.getItem('LushOrderList');
+    if (storedLushOrderList) {
+      setLushOrderList(JSON.parse(storedLushOrderList));
+      console.log('Lush Order List loaded from localStorage:', JSON.parse(storedLushOrderList));
+    } else {
+      // Create a default Lush Order List if none exists
+      const defaultLushOrderList = [
+        {
+          name: 'Salt Water Soother',
+          product: 'Bath Bomb',
+          code: '123456',
+          quantity: '120 unit',
+          weight: '180 g',
+          price: '$8.00',
+          image: '../../Assets/Images/IFrame-14.png',
+        },
+      ];
+      setLushOrderList(defaultLushOrderList);
+      localStorage.setItem('LushOrderList', JSON.stringify(defaultLushOrderList));
+      console.log('New Lush Order List created and populated in localStorage:', defaultLushOrderList);
+    }
+
     setIsHomePage(true);
 
     // Function to continuously check the camera state
@@ -31,7 +55,13 @@ function HomePage() {
     return () => {
       // Cleanup logic if needed
     };
-  }, [isCameraOn]); // Add isCameraOn as a dependency to re-run the effect when it changes
+  }, [isCameraOn]);
+
+  // Function to update Lush Order List and save to localStorage
+  const updateLushOrderList = (newOrderList) => {
+    setLushOrderList(newOrderList);
+    localStorage.setItem('LushOrderList', JSON.stringify(newOrderList));
+  };
 
   const toggleCamera = () => {
     setIsCameraOn(!isCameraOn);
@@ -40,26 +70,31 @@ function HomePage() {
   return (
     <>
       {isCameraOn && (
-        <Camera toggleCamera={toggleCamera} className='homePage__camera'  />
+        <Camera toggleCamera={toggleCamera} className='homePage__camera' />
       )}
       <div className='homePage__behind-camera'>
-
         <div className='homePage'>
           <div className='homePage__content-container'>
             <div className='homePage__left-side-wrapper'>
               <Nav toggleCamera={toggleCamera} />
               <ScrollArea>
-                <ItemList />
+                <ItemList
+                  lushOrderList={lushOrderList}
+                  updateLushOrderList={updateLushOrderList}
+                />
               </ScrollArea>
             </div>
             <div className='homePage__right-side-wrapper'>
-              <OrderList itemData={itemData} />
+              <OrderList
+                itemData={itemData}
+                lushOrderList={lushOrderList}
+                updateLushOrderList={updateLushOrderList}
+              />
             </div>
           </div>
         </div>
         <Footer isHomePage={isHomePage} setIsHomePage={setIsHomePage} />
       </div>
-      
     </>
   );
 }

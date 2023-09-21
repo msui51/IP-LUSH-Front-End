@@ -1,18 +1,40 @@
 import React from 'react';
 import './item.scss';
+import soapImage from '../../Assets/Images/Frame 14.png';
 
-const ShrunkItem = ({ name, product, price, weight }) => {
+const ShrunkItem = ({ lushOrderList, updateLushOrderList, name, product, price, weight, code, image }) => {
+  const handleClick = () => {
+    // Create a new order item
+    const newOrderItem = {
+      name,
+      product,
+      price,
+      weight,
+      code,
+      image,
+      quantity: 1, // Start with a quantity of 1
+    };
+
+    // Update the lushOrderList by adding the new item
+    const updatedOrderList = [...lushOrderList, newOrderItem];
+    updateLushOrderList(updatedOrderList);
+
+    // Log the updated lushOrderList
+    console.log('Updated Lush Order List:', updatedOrderList);
+  };
+
   return (
-       <div className="item">
+    <div className="item">
       <img
         className="item__image"
-        src={require('../../Assets/Images/Frame 14.png')}
+        src={soapImage}
         alt="soap bar"
       ></img>
       <p className="item__title">{name}</p>
       <div className="item__bottom-wrapper">
         <p className="item__price-weight">{price}/{weight}</p>
         <svg
+          onClick={handleClick}
           className="item__add-icon"
           width="22"
           height="19"
@@ -30,7 +52,7 @@ const ShrunkItem = ({ name, product, price, weight }) => {
         </svg>
       </div>
     </div>
-  )
+  );
 }
 
-export default ShrunkItem
+export default ShrunkItem;

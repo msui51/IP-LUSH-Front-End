@@ -4,7 +4,7 @@ import Item from '../Item/Item';
 import data from '../../Assets/Data/test.json';
 import { ScrollArea } from '@mantine/core';
 
-function ItemList() {
+function ItemList({ lushOrderList, updateLushOrderList }) {
 
   
 
@@ -15,10 +15,13 @@ function ItemList() {
           {data.map((data) => (
             <li className='itemList__item' key={data.id}>
               <Item
+                lushOrderList={lushOrderList}
+                updateLushOrderList={updateLushOrderList}
                 name={data.name}
                 product={data.product}
                 price={data.price}
                 weight={data.weight}
+              
               />
             </li>
           ))}

@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './orderList.scss';
-import { useState } from 'react';
 
-function OrderList({}) {
-  const [count, setCount]=useState(0);
-  const handleAddChange=()=>{
-      setCount(count + 1);
-  }
-  const handleMinusChange=()=>{
-    if(count === 0){
+function OrderList({ lushOrderList, updateLushOrderList }) {
+  const [count, setCount] = useState(0);
+
+  const handleAddChange = () => {
+    setCount(count + 1);
+  };
+
+  const handleMinusChange = () => {
+    if (count === 0) {
       return 0;
     }
-    setCount(count -1);
-  }
+    setCount(count - 1);
+  };
+
+  // Create a new array of objects to group items by name and count the quantity
+  const groupedOrderList = lushOrderList.reduce((acc, item) => {
+    const existingItem = acc.find((groupedItem) => groupedItem.name === item.name);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      acc.push({
+        name: item.name,
+        product: item.product, 
+        code: item.code,
+        weight: item.weight,
+        price: item.price,
+        quantity: 1,
+      });
+    }
+
+    return acc;
+  }, []);
+
+  // Log the new array to the console
+  useEffect(() => {
+    console.log(groupedOrderList);
+  }, [groupedOrderList]);
+
   return (
     <div className='orderList'>
       <div className='orderList__header'>
@@ -20,41 +47,36 @@ function OrderList({}) {
         <div className='orderList__wrapper'>
           <div className='orderList__wrapper-top'>
             <ul className='orderList__list'>
-              <li className='orderList__listItem'>
-                    <div className='orderList__boxLeft'>
-                        <img
-                            className="orderList__item-image"
-                            src={require('../../Assets/Images/Frame 14.png')}
-                            alt="soap bar"
-                        />
-                    
-                    </div>
-                    <div className='orderList__boxCenter'>
-                        <p className="orderList__title">Salt Water Soother</p>
-                        <p className="orderList__productDetails">180g</p>
-                        <div className="orderList__productDetails">
-                          <div className="orderList__productQuantityWrapper">
-                          {/* PUT BUTTON COUNTERS IN HERE LOGIC TO BE ADDED */}
-                          <button className='orderList__button' type='submit' onClick={handleMinusChange}>
-                          <svg className="orderList__icon orderList__icon--minus" width="15" height="3" viewBox="0 0 15 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="Line 3" d="M1.75 1.75L13.75 1.75" stroke="black" stroke-width="2.25" stroke-linecap="round"/>
-                          </svg>
-                          </button>
-                          <p className='orderList__productQuantity'>{count}</p>
-                          <button className='orderList__button' type='submit' onClick={handleAddChange}>
-                          <svg className="orderList__icon orderList__icon--add" width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g id="plus-01">
-                          <path id="Icon" d="M10.7501 4.35004L10.7501 15.15M17.0501 9.75004L4.45007 9.75004" stroke="black" stroke-width="2.25" stroke-linecap="round"/>
-                          </g>
-                          </svg>
-                          </button>
-                          </div> 
-                        </div>          
-                    </div>
-                    <div className='orderList__boxRight'>
-                        <p className="orderList__price-weight">$8.00</p>
-                    </div>
-              </li>
+              {groupedOrderList.map((item) => (
+                <li className='orderList__listItem' key={item.name}>
+                  <div className='orderList__boxLeft'>
+                    {/* Replace this with the actual image source */}
+                    <img
+                      className="orderList__item-image"
+                      src={require(`../../Assets/Images/Frame 14.png`)}
+                      alt={item.name}
+                    />
+                  </div>
+                  <div className='orderList__boxCenter'>
+                    <p className="orderList__title">{item.name}</p>
+                    <p className="orderList__productDetails">{item.weight}</p>
+                    <div className="orderList__productDetails">
+                      <div className="orderList__productQuantityWrapper">
+                        <button className='orderList__button' type='submit' onClick={handleMinusChange}>
+                          {/* Your minus button SVG */}
+                        </button>
+                        <p className='orderList__productQuantity'>{item.quantity}</p>
+                        <button className='orderList__button' type='submit' onClick={handleAddChange}>
+                          {/* Your add button SVG */}
+                        </button>
+                      </div> 
+                    </div>          
+                  </div>
+                  <div className='orderList__boxRight'>
+                    <p className="orderList__price-weight">{item.price}</p>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
           <div className='orderList__wrapper-bottom'>
@@ -77,11 +99,9 @@ function OrderList({}) {
             <button className='orderList__button-pay' type='submit'>PAY NOW</button>
           </div>
         </div>
-        
       </div>
-
     </div>
-  )
+  );
 }
 
-export default OrderList
+export default OrderList;
